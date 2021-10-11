@@ -12,7 +12,7 @@ auto main(int argc, char* argv[]) -> int
     }
 
     auto const name = std::string{argv[1]};
-    std::cout << "Hello, " << name << "!\n";
+    std::cout << "Hello, " << name << "Jakub!\n";
 
     return 0;
 }
