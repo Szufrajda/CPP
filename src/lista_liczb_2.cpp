@@ -1,4 +1,4 @@
-// Zad.5 Relacja między liczbami //
+// Zad.2 Lista liczb_2 //
 #include <iostream>
 #include <string>
 auto pytanie(std::string prompt) -> int
@@ -10,25 +10,16 @@ return n;
 }
 auto main()-> int
 {
-int a,b;
+int a,b,c;
 a=pytanie("Podaj pierwszą liczbę: ");
 b=pytanie("Podaj drugą liczbę: ");
-
-if (a>b)
-{
-std::cout<<a<<" > "<<b;
+c=pytanie("Podaj trzecią liczbę: ");
+while (a!=b){
+if (a%c==0){
+std::cout<<a<<"\n";
 }
-if (b>a)
-{
-std::cout<<b<<" > "<<a;
-}
-if (a==b)
-{
-std::cout<<a<<" = "<<b;
+a++; 
 }
 return 0;
 }
-
-
-
 
