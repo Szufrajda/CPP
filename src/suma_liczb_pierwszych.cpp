@@ -1,4 +1,4 @@
-// Zad.4 Liczba pierwsza //
+// Zad.5 Suma liczb pierwszych //
 #include <iostream>
 #include <string>
 auto pytanie(std::string prompt) -> int
@@ -19,20 +19,26 @@ auto pierwsza(int a) -> int
                 x = false;
             }
         }
+}
         if (x == true) {
-            std::cout << "Liczba " << a << " jest liczbą pierwszą";
             return a;
         } else {
-            std::cout << "Liczba " << a << " nie jest liczbą pierwszą";
             return 0;
         }
     }
-}
-auto main() -> int
-{
-    int a, b;
-    a = pytanie("Podaj liczbę: ");
-    b = pierwsza(a);
-    std::cout << b;
-    return 0;
-}
+    auto main()->int
+    {
+        int a;
+int b = 0;
+        a = pytanie("Podaj liczbę: ");
+        while (a > 0) {
+            if (pierwsza(a)>0) {
+                b= b+a;
+                a--;
+            } else {
+                a--;
+            }
+        }
+        std::cout <<"Suma liczb pierwszych "<<b;
+        return 0;
+    }

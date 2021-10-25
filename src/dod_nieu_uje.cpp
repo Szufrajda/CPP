@@ -3,26 +3,21 @@
 #include <string>
 auto pytanie(std::string prompt) -> int
 {
-int n;
-std::cout<<prompt<<"\n";
-std::cin >> n;
-return n;
+    int n;
+    std::cout << prompt << "\n";
+    std::cin >> n;
+    return n;
 }
-auto main()-> int
+auto main() -> int
 {
-int a;
-a=pytanie("Podaj liczbę: ");
-if (a>0){
-std::cout<<("Liczba jest dodatnia");
+    int a;
+    a = pytanie("Podaj liczbę: ");
+    if (a > 0) {
+        std::cout << ("Liczba jest dodatnia");
+    } else if (a < 0) {
+        std::cout << ("Liczba jest ujemna");
+    } else {
+        std::cout << ("Liczba jest równa zero");
+    }
+    return 0;
 }
-else if (a<0){
-std::cout<<("Liczba jest ujemna");
-}
-else
-{
-std::cout<<("Liczba jest równa zero");
-}
-return 0;
-}
-
-
