@@ -8,23 +8,28 @@ auto pytanie(std::string prompt) -> int
     std::cin >> n;
     return n;
 }
-auto main() -> int
+auto sprawdzanie(int a, int b) -> int
 {
-    int a, b, c, d, e;
-    a = pytanie("Podaj pierwszą liczbę: ");
-    b = pytanie("Podaj drugą liczbę: ");
-    c = pytanie("Podaj trzecią liczbę: ");
-    d = pytanie("Podaj czwartą liczbę: ");
-    e = pytanie("Podaj piątą liczbę: ");
-
-    if (a > b || a > c || a > d || a > e) {
-        std::cout << a << " > " << b, c, d, e;
+    if (a > b){
+        std::cout << a << " > " << b<<"\n";
     }
-    if (b > a || b > c || b > d || b > e) {
-        std::cout << b << " > " << a, c, d, e;
+    if (b > a){
+        std::cout << b << " > " << a<<"\n";
     }
     if (a == b) {
-        std::cout << a << " = " << b;
+        std::cout << a << " = " << b<<"\n";
     }
     return 0;
+}
+auto main(int argc, char* argv[]) -> int
+{
+	if (argc==0) {
+	return 1;
+			}
+			int i=2;
+			while (i<argc) {
+			sprawdzanie(std::stoi(argv[1]), std::stoi(argv[i]));
+			i++;
+			}
+	return 0;
 }
