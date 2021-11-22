@@ -10,26 +10,26 @@ auto pytanie(std::string prompt) -> int
 }
 auto sprawdzanie(int a, int b) -> int
 {
-    if (a > b){
-        std::cout << a << " > " << b<<"\n";
+    if (a > b) {
+        std::cout << a << " > " << b << "\n";
     }
-    if (b > a){
-        std::cout << b << " > " << a<<"\n";
+    if (b > a) {
+        std::cout << b << " > " << a << "\n";
     }
     if (a == b) {
-        std::cout << a << " = " << b<<"\n";
+        std::cout << a << " = " << b << "\n";
     }
     return 0;
 }
 auto main(int argc, char* argv[]) -> int
 {
-	if (argc==0) {
-	return 1;
-			}
-			int i=2;
-			while (i<argc) {
-			sprawdzanie(std::stoi(argv[1]), std::stoi(argv[i]));
-			i++;
-			}
-	return 0;
+    if (argc == 0) {
+        return 1;
+    }
+    int i = 2;
+    while (i < argc) {
+        sprawdzanie(std::stoi(argv[1]), std::stoi(argv[i]));
+        i++;
+    }
+    return 0;
 }

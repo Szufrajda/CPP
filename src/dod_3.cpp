@@ -34,9 +34,11 @@ auto main() -> int
     b = pierwsza(a);
     std::cout << b;
     return 0;
-}
-
-
-
-
-
+    {
+        int j = 0;
+        while (j == b) {
+            std::cout << "Ilość wykonanych iteracja: " << j;
+            j++;
+            return 0;
+        }
+    }

@@ -19,26 +19,26 @@ auto pierwsza(int a) -> int
                 x = false;
             }
         }
-}
-        if (x == true) {
-            return a;
-        } else {
-            return 0;
-        }
     }
-    auto main()->int
-    {
-        int a;
-int b = 0;
-        a = pytanie("Podaj liczbę: ");
-        while (a > 0) {
-            if (pierwsza(a)>0) {
-                b= b+a;
-                a--;
-            } else {
-                a--;
-            }
-        }
-        std::cout <<"Suma liczb pierwszych "<<b;
+    if (x == true) {
+        return a;
+    } else {
         return 0;
     }
+}
+auto main() -> int
+{
+    int a;
+    int b = 0;
+    a     = pytanie("Podaj liczbę: ");
+    while (a > 0) {
+        if (pierwsza(a) > 0) {
+            b = b + a;
+            a--;
+        } else {
+            a--;
+        }
+    }
+    std::cout << "Suma liczb pierwszych " << b;
+    return 0;
+}
