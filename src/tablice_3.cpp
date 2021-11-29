@@ -1,31 +1,44 @@
+#include <math.h>
+
+#include <array>
 #include <iostream>
 #include <string>
 
-auto pytanie(std::string tekst) -> int
+
+auto pytanie(std::string const prompt) -> int
+
 {
-    int n;
-    std::cout << tekst << "\n";
-    std::cin >> n;
-    return n;
-}
-auto asum(int a[], int n) -> int
-{
-    for (int i = 0; i < n; i++) {
-        a[i] = 0;
+    if (not prompt.empty()) {
+        std::cout << prompt;
     }
+
+    auto value = std::string{};
+
+    std::getline(std::cin, value);
+
+    return std::stoi(value);
 }
-auto main() -> int
+
+auto asum(std::array<int, 10> a, int n) -> int
+
 {
-    int n = pytanie("Jaki wymiar ma mieć tablica?");
-    int a[1000];
-    int i=0;
-    int example [i];
-	asum(a,n);
-        std::array<int, 10> example { 42, 9, -1, 18, 59, 3, 101, 31, 72, 12} 
-	while(i<n)
-	{
-        std::cout << example[0] << "\n";
-	i++;
-	}
-return 0;
+    int x = 0;
+
+    for (int i = 0; i < n; i++) {
+        x = x + a[i];
+    }
+
+    return x;
+}
+
+auto main() -> int
+
+{
+    auto const n = pytanie("Ile ma być liczb? \n");
+
+    std::array<int, 10> a = {42, 9, -1, 18, 59, 3, 101, 31, 72, 12};
+
+    std::cout << "Suma wynosi: " << asum(a, n);
+
+    return 0;
 }
