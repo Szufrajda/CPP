@@ -215,7 +215,7 @@ int mina;      //ilosc min
             return;
     }
 
-    void replaceMine(int wiersz, int kolumna, char tablica[][MAX_WIELKOSC]) {     //funkcja zastepujπca mine (wiersz, kolumna) i umieszczajaca ja na wolnym miejscu
+    void replaceMine(int wiersz, int kolumna, char tablica[][MAX_WIELKOSC]) {     //funkcja zastepuj≈°ca mine (wiersz, kolumna) i umieszczajaca ja na wolnym miejscu
         for (int i=0; i < wielkosc; i++) {
             for (int j=0; j < wielkosc; j++) {
 
